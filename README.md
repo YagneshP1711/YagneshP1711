@@ -1,4 +1,4 @@
-# Your Portfolio (Wix-style one page)
+# Your Portfolio ( one page)
 
 ## How to deploy to GitHub Pages
 
