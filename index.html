@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio with hero, about, projects, and contact sections." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;         /* page background (light) */
+      --text:#1a1d23;       /* main text */
+      --muted:#5c6573;      /* secondary text */
+      --accent:#0b6cff;     /* primary accent */
+      --soft:#f3f5f8;       /* soft section bg */
+      --line:#e8ecf1;       /* subtle borders */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;scroll-behavior:smooth}
+    body{font-family:Lato,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    h1,h2,h3{font-family:"Playfair Display", Georgia, serif;line-height:1.2;margin:0 0 10px}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav-wrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:800;font-family:"Playfair Display", Georgia, serif;font-size:20px}
+    .nav a{color:var(--text);text-decoration:none;margin-left:18px;font-weight:600}
+    .nav a:hover{color:var(--accent)}
+    .nav .btn{margin-left:18px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:#fff;background:var(--accent)}
+
+    /* HERO */
+    .hero{min-height:88vh;display:grid;place-items:center;position:relative;text-align:center}
+    .hero .bg{position:absolute;inset:0;background:url('hero.jpg') center/cover no-repeat;filter:brightness(.75);}
+    .hero .layer{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.05))}
+    .hero .inner{position:relative;padding:0 20px;max-width:900px;color:#fff}
+    .hero h1{font-size:clamp(34px,6vw,68px);letter-spacing:.4px;margin-bottom:8px}
+    .hero .subtitle{font-size:clamp(16px,2.3vw,22px);opacity:.95}
+    .cta{margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-outline{display:inline-block;padding:11px 18px;border-radius:999px;border:2px solid #fff;color:#fff;text-decoration:none;font-weight:700}
+    .btn-solid{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+
+    /* SECTIONS */
+    .section{padding:80px 20px}
+    .wrap{max-width:1100px;margin:0 auto}
+    .lead{color:var(--muted);margin:0 0 24px}
+
+    /* ABOUT */
+    .about{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center}
+    .about .card{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px}
+    .avatar{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+    .hello{font-weight:800;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+    .actions{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
+
+    /* PROJECTS grid */
+    .projects{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .grid{display:grid;gap:18px}
+    .projects-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 10px 20px rgba(10,20,30,.04)}
+    .card img{width:100%;height:190px;object-fit:cover;display:block}
+    .card .content{padding:16px}
+    .badge{font-size:12px;color:#0b2b66;background:#e8f1ff;display:inline-block;padding:4px 10px;border-radius:999px;margin-bottom:10px;font-weight:800}
+    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+
+    /* CONTACT */
+    .contact .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .contact .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+    .contact input,.contact textarea{width:100%;padding:12px 14px;margin:8px 0 12px;background:#fafbfc;border:1px solid var(--line);border-radius:10px;color:var(--text)}
+    .contact button{padding:12px 16px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:800}
+    .list p{margin:.5rem 0}
+
+    /* FOOTER */
+    footer{padding:26px 20px;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+
+    /* RESPONSIVE */
+    @media (max-width:900px){
+      .about{grid-template-columns:1fr}
+      .contact .cols{grid-template-columns:1fr}
+      .nav .links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-wrap">
+      <div class="brand">Your Name</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="./Your_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home" role="banner">
+    <div class="bg"></div>
+    <div class="layer"></div>
+    <div class="inner">
+      <h1>Your Name</h1>
+      <p class="subtitle">MBA Graduate</p>
+      <div class="cta">
+        <a class="btn-solid" href="#projects">Projects</a>
+        <a class="btn-outline" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap about">
+      <div class="card">
+        <img class="avatar" src="portrait.jpg" alt="Your portrait" />
+      </div>
+      <div>
+        <div class="hello">Namaste</div>
+        <h2>A Bit About Me</h2>
+        <p class="lead">Hi, I’m <strong>Your Name</strong>, a motivated and adaptable professional. I bring a blend of people skills, operational know‑how, and a strong work ethic. I’m passionate about meaningful work and continuous learning.</p>
+        <div class="actions">
+          <a class="btn-solid" href="./Your_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="btn-outline" href="#projects">See Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="lead">A small selection of my work.</p>
+      <div class="grid projects-grid">
+        <article class="card">
+          <img src="project1.jpg" alt="Project 1" />
+          <div class="content">
+            <span class="badge">Category</span>
+            <h3>Project Title One</h3>
+            <p class="meta">Short one‑liner about what it is and your role.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="project2.jpg" alt="Project 2" />
+          <div class="content">
+            <span class="badge">Category</span>
+            <h3>Project Title Two</h3>
+            <p class="meta">Short one‑liner about what it is and your role.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="project3.jpg" alt="Project 3" />
+          <div class="content">
+            <span class="badge">Category</span>
+            <h3>Project Title Three</h3>
+            <p class="meta">Short one‑liner about what it is and your role.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="wrap cols">
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="lead">Phone<br><strong>+64-000000000</strong></p>
+        <div class="list">
+          <p><strong>Email</strong><br><a href="mailto:you@example.com">you@example.com</a></p>
+          <p><strong>Follow Me</strong><br>
+            <a href="#" aria-label="Instagram">Instagram</a> ·
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Message Me</h2>
+        <form action="https://formspree.io/f/yourFormId" method="POST">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Your Name
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
