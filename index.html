@@ -3,27 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jay Savaliya — Portfolio</title>
-  <meta name="description" content="Jay Savaliya's personal portfolio with hero, about, projects, and contact sections." />
+  <title>Yagnesh Pambhar — Portfolio</title>
+  <meta name="description" content="Yagnesh Pambhar's personal portfolio with hero, about, projects, and contact sections." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#ffffff;         /* page background (light) */
-      --text:#1a1d23;       /* main text */
-      --muted:#5c6573;      /* secondary text */
-      --accent:#0b6cff;     /* primary accent */
-      --soft:#f3f5f8;       /* soft section bg */
-      --line:#e8ecf1;       /* subtle borders */
-      --hero:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop'); /* hero bg */
+      --bg:#ffffff;
+      --text:#1a1d23;
+      --muted:#5c6573;
+      --accent:#0b6cff;
+      --soft:#f3f5f8;
+      --line:#e8ecf1;
+      --hero:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;scroll-behavior:smooth}
     body{font-family:Lato,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
     h1,h2,h3{font-family:"Playfair Display", Georgia, serif;line-height:1.2;margin:0 0 10px}
 
-    /* NAV */
     .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);
          backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .nav-wrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;
@@ -34,7 +33,6 @@
     .nav .btn{margin-left:18px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);
               text-decoration:none;color:#fff;background:var(--accent)}
 
-    /* HERO */
     .hero{min-height:88vh;display:grid;place-items:center;position:relative;text-align:center}
     .hero .bg{position:absolute;inset:0;background:var(--hero) center/cover no-repeat;filter:brightness(.75);}
     .hero .layer{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.05))}
@@ -45,19 +43,16 @@
     .btn-outline{display:inline-block;padding:11px 18px;border-radius:999px;border:2px solid #fff;color:#fff;text-decoration:none;font-weight:700}
     .btn-solid{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
 
-    /* SECTIONS */
     .section{padding:80px 20px}
     .wrap{max-width:1100px;margin:0 auto}
     .lead{color:var(--muted);margin:0 0 24px}
 
-    /* ABOUT */
     .about{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center}
     .about .card{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px}
     .avatar{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
     .hello{font-weight:800;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
     .actions{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
 
-    /* PROJECTS grid */
     .projects{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .grid{display:grid;gap:18px}
     .projects-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -66,17 +61,14 @@
     .card .content{padding:16px}
     .meta{color:var(--muted);font-size:14px;margin-top:6px}
 
-    /* CONTACT */
     .contact .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
     .contact .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
     .contact input,.contact textarea{width:100%;padding:12px 14px;margin:8px 0 12px;background:#fafbfc;border:1px solid var(--line);border-radius:10px;color:var(--text)}
     .contact button{padding:12px 16px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:800}
     .list p{margin:.5rem 0}
 
-    /* FOOTER */
     footer{padding:26px 20px;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
 
-    /* RESPONSIVE */
     @media (max-width:900px){
       .about{grid-template-columns:1fr}
       .contact .cols{grid-template-columns:1fr}
@@ -85,25 +77,23 @@
   </style>
 </head>
 <body>
-  <!-- NAVIGATION -->
   <nav class="nav" aria-label="Main navigation">
     <div class="nav-wrap">
-      <div class="brand">Jay Savaliya</div>
+      <div class="brand">Yagnesh Pambhar</div>
       <div class="links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a class="btn" href="./Jay_Savaliya_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn" href="./Yagnesh_Pambhar_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero" id="home" role="banner">
     <div class="bg"></div>
     <div class="layer"></div>
     <div class="inner">
-      <h1>Jay Savaliya</h1>
+      <h1>Yagnesh Pambhar</h1>
       <p class="subtitle">MBA Graduate</p>
       <div class="cta">
         <a class="btn-solid" href="#projects">Projects</a>
@@ -112,25 +102,23 @@
     </div>
   </header>
 
-  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="wrap about">
       <div class="card">
-        <img class="avatar" src="Images/pic.jpg" alt="Jay Savaliya portrait" />
+        <img class="avatar" src="Images/pic1.png" alt="Yagnesh Pambhar portrait" />
       </div>
       <div>
         <div class="hello">Namaste</div>
         <h2>A Bit About Me</h2>
-        <p class="lead">Hi, I’m <strong>Jay Savaliya</strong>, a motivated and adaptable professional. I bring a blend of people skills, operational know-how, and a strong work ethic. I’m passionate about meaningful work and continuous learning.</p>
+        <p class="lead">Hi, I’m <strong>Yagnesh Pambhar</strong>, a motivated and adaptable professional. I bring a blend of people skills, operational know-how, and a strong work ethic. I’m passionate about meaningful work and continuous learning.</p>
         <div class="actions">
-          <a class="btn-solid" href="./Jay_Savaliya_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="btn-solid" href="./Yagnesh_Pambhar_Resume.pdf" target="_blank" rel="noopener">Resume</a>
           <a class="btn-outline" href="#projects">See Projects</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects" class="section projects">
     <div class="wrap">
       <h2>Projects</h2>
@@ -172,7 +160,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="wrap cols">
       <div class="card">
@@ -201,7 +188,7 @@
     </div>
   </section>
 
-  <footer>© <span id="year"></span> Jay Savaliya</footer>
+  <footer>© <span id="year"></span> Yagnesh Pambhar</footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
